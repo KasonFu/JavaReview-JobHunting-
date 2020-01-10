@@ -1,0 +1,57 @@
+
+public class 快速排序 {
+	public static void quicksort(int[] a,int begin,int end)
+	{
+		if(begin>=end) return;
+		int left=begin;
+		int right=end;
+		int middlevalue=a[left];
+		while(left<right) {
+			if(a[left+1]<middlevalue)
+			{
+				a[left] = a[left+1];
+				left++;
+			}else
+			{
+				int temp=a[left+1];
+				a[left+1]=a[right];
+				a[right]=temp;
+				right--;
+			}
+		}
+		a[left]=middlevalue;
+		quicksort(a,begin,left-1);
+		quicksort(a, left+1, end);
+	}
+	//看不懂
+	public static void quicksort2(int[] a,int begin,int end)
+	{
+		if(begin>=end)return;
+		int index=begin;
+		int middlevalue = a[index];
+		for(int i=begin+1;i<a.length;i++)
+		{
+			if(a[i]<middlevalue)
+			{
+				index++;
+				int temp=a[i];				
+				a[i]=a[index];
+				a[index]=temp;
+			}
+		}
+		int temp=a[begin];
+		a[begin]=a[index];
+		a[index]=temp;
+		quicksort2(a, begin, index-1);
+		quicksort2(a, index+1, end);
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a[] = {5,3,8,4,6,2};
+		quicksort2(a, 0, a.length-1);
+		for(int i=0;i<a.length;i++) {
+			System.out.println(a[i]);
+		}
+	}
+
+}

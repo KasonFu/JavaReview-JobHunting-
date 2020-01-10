@@ -1,0 +1,11 @@
+import com.interfaceTest.changeCase;
+
+public class Lowercase implements changeCase {
+
+	@Override
+	public String change() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+		<!-- 在这个beans容器里放入所有你想配置的bean -->
+		<!-- bean元素作用是，当spring框架加载时，spring就会自动创建一个bean对象 -->
+		<!-- 这个bean相当于UserService user = new UserService();user.setName("Kason") -->
+
+<bean id="student" class="com.rc.sp.Student">
+    <constructor-arg name="id" value="1"/>
+    <constructor-arg name="name" value="student"/>
+    <constructor-arg name="dream">
+        <list>
+            <value>soldier</value>
+            <value>scientist</value>
+            <value>pilot</value>
+        </list>
+    </constructor-arg>
+    <constructor-arg name="score">
+        <map>
+            <entry key="math" value="90"/>
+            <entry key="english" value="85"/>
+        </map>
+    </constructor-arg>
+    <constructor-arg name="graduation" value="false"/>
+</bean>
+
+
+</beans>
+

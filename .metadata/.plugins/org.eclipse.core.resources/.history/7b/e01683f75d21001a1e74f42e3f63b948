@@ -1,0 +1,45 @@
+
+public class WordSearch {
+	static int[][] direction = {{-1,0},{1,0},{0,-1},{0,1}};
+    public static boolean exist(char[][] board, String word) {
+        if(word.length()==0) return false;
+        
+        for(int i=0;i<board.length;i++)
+        {
+        	for(int j=0;j<board[i].length;j++)
+        	{
+        		if(helper(board,word,0,i,j,0,0))
+        			return true;
+        	}
+        }
+        return false;
+    }
+    public static boolean helper(char[][] board, String word, int index,int i, int j,int previ,int prevj)
+    {
+    	if(index==(word.length()-1)&&board[i][j]==word.charAt(index))
+    		return true;
+    	if(board[i][j]==word.charAt(index))
+    	{
+    		for(int k=0;k<4;k++)
+    		{
+	    			if(inrange(board,i+direction[k][0],j+direction[k][1],previ,prevj)
+	    					&&helper(board,word,index+1,i+direction[k][0],j+direction[k][1],i,j))
+	    				return true;
+    		}
+    	}
+    	return false;
+    }
+    public static boolean inrange(char[][] board, int i, int j, int previ, int prevj)
+    {
+    	if(i<board.length&&j<board[i].length&&i>=0&&j>=0&&(i!=previ||j!=prevj))
+    		return true;
+    	return false;
+    }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		char[][] board = {{'A','B','C','E'},{'S','F','C','S'},{'A','D','E','E'}};
+		String s = "ABCCED";
+		System.out.print(exist(board,s));
+	}
+
+}

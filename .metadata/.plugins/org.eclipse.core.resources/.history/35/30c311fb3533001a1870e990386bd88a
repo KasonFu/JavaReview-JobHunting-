@@ -1,0 +1,13 @@
+package com.AOP;
+
+import org.springframework.aop.ThrowsAdvice;
+
+import com.sun.jdi.Method;
+
+public class MyThrowAdvice implements ThrowsAdvice {
+
+	//格式
+	void afterThrowing(Method m,Object[] os,Object target, Exception e) {
+		System.out.println("出异常了"+e.getMessage());
+	}
+}

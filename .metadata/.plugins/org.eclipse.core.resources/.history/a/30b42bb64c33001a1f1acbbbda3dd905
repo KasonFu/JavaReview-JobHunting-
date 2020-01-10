@@ -1,0 +1,3 @@
+module MySSH {
+	requires spring.context;
+}

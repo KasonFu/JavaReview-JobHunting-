@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+		<!-- 在这个beans容器里放入所有你想配置的bean -->
+		<!-- bean元素作用是，当spring框架加载时，spring就会自动创建一个bean对象 -->
+		<!-- 这个bean相当于UserService user = new UserService();user.setName("Kason") -->
+<bean id="personservice" init-method="init" destroy-method="destroy" class="com.beanlifetime.PersonService">
+<property name="name" value="Kason"></property>
+</bean>
+<bean id="beanpostprocessor" class="com.beanlifetime.MyBeanPostPorcessor"></bean>
+</beans>
+

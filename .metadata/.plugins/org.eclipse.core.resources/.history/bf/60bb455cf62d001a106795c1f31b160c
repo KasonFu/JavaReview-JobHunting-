@@ -1,0 +1,3 @@
+module MySpring {
+	requires spring.context;
+}

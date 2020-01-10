@@ -1,0 +1,11 @@
+package com.interfaceTest;
+
+public class Uppercase implements changeCase {
+
+	@Override
+	public String change() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

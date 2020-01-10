@@ -1,0 +1,7 @@
+package com.AOP;
+
+import org.springframework.aop.MethodBeforeAdvice;
+
+public class MyMethodBeforeAdvice implements MethodBeforeAdvice {
+
+}

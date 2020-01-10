@@ -1,0 +1,18 @@
+package com.beanlifetime;
+
+public class PersonService {
+	private String name;
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		System.out.print("Setting name");
+		this.name = name;
+	}
+
+	public void sayhello() {
+		System.out.print("Hello "+name);
+	}
+}

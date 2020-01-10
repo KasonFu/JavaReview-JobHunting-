@@ -1,0 +1,22 @@
+package com.collection;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MainApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ApplicationContext context = new ClassPathXmlApplicationContext("com/collection/beans.xml");
+		Department d = (Department) context.getBean("department");
+		System.out.println(d.getName());
+		for(String k: d.getEmpName()) {
+			System.out.print(k+", ");
+		}
+		
+		for(Employee k: d.getEmplist()) {
+			System.out.println(k.getName());
+		}
+	}
+
+}

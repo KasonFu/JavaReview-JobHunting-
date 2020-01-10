@@ -1,0 +1,21 @@
+package com.collection;
+
+public class Department {
+	private String name;
+	private String[] EmpName;
+	
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String[] getEmpName() {
+		return EmpName;
+	}
+	public void setEmpName(String[] empName) {
+		EmpName = empName;
+	}
+
+}

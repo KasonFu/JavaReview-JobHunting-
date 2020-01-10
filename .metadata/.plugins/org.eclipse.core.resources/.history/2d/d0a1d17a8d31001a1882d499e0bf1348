@@ -1,0 +1,5 @@
+package com.beanlifetime;
+
+public class PersonService {
+
+}

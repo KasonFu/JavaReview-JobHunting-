@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+		<!-- 在这个beans容器里放入所有你想配置的bean -->
+		<!-- bean元素作用是，当spring框架加载时，spring就会自动创建一个bean对象 -->
+		<!-- 这个bean相当于UserService user = new UserService();user.setName("Kason") -->
+<!-- 配置被代理对象 -->
+<bean id="test1service" class="com.AOP.Test1Service">
+	<property name="name" value="Kason"/>
+</bean>
+
+
+<!-- 配置前置通知方法 -->
+<bean id="mymethodbeforeadvice" class="com.AOP.MyMethodBeforeAdvice"/>
+<bean id="mymethodafteradvice" class="com.AOP.MyMethodAfterAdvice"/>
+
+
+<!-- 配置代理对象 -->
+<bean id="proxyfactorybean" class="org.springframework.aop.framework.ProxyFactoryBean">
+	<!-- 代理接口集 -->
+	<property name="proxyInterfaces">
+		<list>
+			<value>com.AOP.TestServiceInterface</value>
+			<value>com.AOP.TestServiceInterface2</value>
+		</list>
+	</property>
+	<!-- 把通知织入到代理对象 -->
+	<property name="interceptorNames">
+				<!-- 相当于把mymethodbeforeadvice前置通知和代理对象关联起来 
+				我们也可以把通知看成拦截器，我拦住你先干我的事情，再给你干-->
+		<list>
+			<value>mymethodbeforeadvice</value>
+			<value>mymethodagteradvice</value>
+		</list>
+	</property>
+	<!-- 配置被代理对象 -->
+	<property name="target" ref="test1service" />
+</bean>
+</beans>
+

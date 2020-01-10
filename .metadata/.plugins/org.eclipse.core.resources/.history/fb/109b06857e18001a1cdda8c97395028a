@@ -1,0 +1,66 @@
+class TreeNode{
+	int val;
+	int position;
+	TreeNode left;
+	TreeNode right;
+	TreeNode(int a,int b){
+		val=a;
+		position=b;
+	}
+}
+class BinaryTree{
+	TreeNode root;
+	public void add(int a, int b){
+		TreeNode newnode = new TreeNode(a,b);
+		if(root==null)
+			root = newnode;
+		else {
+			add(root,a,b);
+		}
+	}
+	private void add(TreeNode current, int a, int b) {
+		TreeNode newnode = new TreeNode(a,b);
+		if(current==null) current=newnode;
+		else {
+				if(newnode.val>current.val) {
+					add(current.right,a,b);
+				}else if(newnode.val<current.val) {
+					add(current.left,a,b);
+				}else {return;}
+		}
+	}
+	
+	public int search(int a)
+	{
+		if(a==root.val)
+			return 0;
+		else 
+			return search(a,root);
+	}
+	
+	private int search(int a, TreeNode t)
+	{
+		if(t==null)return -1;
+		if(a==t.val)
+			return t.position;
+		else if(a<t.val)
+			return search(a,t.left);
+		else if(a>t.val)
+			return search(a,t.right);
+		
+		return -2;
+	}
+}
+public class 关于二叉树创建添加搜索 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] a = {2,6,5,8,3,4,7,9,0};
+		BinaryTree b = new BinaryTree();
+		for(int i=0;i<a.length;i++) {
+			b.add(a[i],i);
+		}
+		System.out.println(b.search(2));
+	}
+
+}

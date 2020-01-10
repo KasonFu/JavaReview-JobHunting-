@@ -1,0 +1,27 @@
+
+public class ¿ìËÙÅÅĞò {
+	public static void quicksort(int[] a,int begin,int end)
+	{
+		if(begin>=end) return;
+		int left=begin;
+		int right=end;
+		int middlevalue=a[left];
+		while(left<right) {
+			if(a[left]<=a[left+1])
+			{
+				left++;
+			}else
+			{
+				int temp=a[left];
+				a[left]=a[left+1];
+				a[left+1]=a[left];
+				left++;
+			}
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

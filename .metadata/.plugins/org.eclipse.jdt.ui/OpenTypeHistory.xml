@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=MySpring/D:\/Necessary File\/Spring\/spring-framework-3.2.0.RELEASE-dist\/spring-framework-3.2.0.RELEASE\/libs\/spring-beans-3.2.0.RELEASE.jar&lt;org.springframework.beans.factory.config(BeanPostProcessor.class[BeanPostProcessor" modifiers="1537" timestamp="1577495571024"/>
+    <typeInfo handle="=MySpring/src&lt;com.inherit{Student.java[Student" modifiers="1" timestamp="1578441406569"/>
+    <typeInfo handle="=MySpring/D:\/Necessary File\/Spring\/spring-framework-3.2.0.RELEASE-dist\/spring-framework-3.2.0.RELEASE\/libs\/spring-aop-3.2.0.RELEASE.jar&lt;org.springframework.aop(MethodBeforeAdvice.class[MethodBeforeAdvice" modifiers="1537" timestamp="1577495569329"/>
+    <typeInfo handle="=MySpring/C:\/Program Files\/Java\/jdk-13.0.1\/lib\/jrt-fs.jar`jdk.jdi&lt;com.sun.jdi(Method.class[Method" modifiers="1537" timestamp="1574113795793"/>
+    <typeInfo handle="=MySpring/D:\/Necessary File\/Spring\/spring-framework-3.2.0.RELEASE-dist\/spring-framework-3.2.0.RELEASE\/libs\/spring-aop-3.2.0.RELEASE.jar&lt;org.springframework.aop(AfterAdvice.class[AfterAdvice" modifiers="1537" timestamp="1577495569329"/>
+    <typeInfo handle="=MySpring/D:\/Necessary File\/Spring\/spring-framework-3.2.0.RELEASE-dist\/spring-framework-3.2.0.RELEASE\/libs\/spring-aop-3.2.0.RELEASE.jar&lt;org.springframework.aop(AfterReturningAdvice.class[AfterReturningAdvice" modifiers="1537" timestamp="1577495569329"/>
+    <typeInfo handle="=MySpring/D:\/Necessary File\/Spring\/spring-framework-3.2.0.RELEASE-dist\/spring-framework-3.2.0.RELEASE\/libs\/spring-core-3.2.0.RELEASE.jar&lt;org.springframework.cglib.proxy(MethodInterceptor.class[MethodInterceptor" modifiers="1537" timestamp="1577495572789"/>
+    <typeInfo handle="=MySpring/D:\/Necessary File\/Spring\/spring-framework-3.2.0.RELEASE-dist\/spring-framework-3.2.0.RELEASE\/libs\/aopalliance-.jar&lt;org.aopalliance.intercept(MethodInterceptor.class[MethodInterceptor" modifiers="1537" timestamp="1578549962686"/>
+    <typeInfo handle="=MySpring/D:\/Necessary File\/Spring\/spring-framework-3.2.0.RELEASE-dist\/spring-framework-3.2.0.RELEASE\/libs\/spring-aop-3.2.0.RELEASE.jar&lt;org.springframework.aop(ThrowsAdvice.class[ThrowsAdvice" modifiers="1537" timestamp="1577495569329"/>
+</typeInfoHistroy>

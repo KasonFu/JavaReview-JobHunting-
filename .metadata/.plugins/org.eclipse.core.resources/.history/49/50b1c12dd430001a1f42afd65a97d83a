@@ -1,0 +1,26 @@
+package com.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.sevice.UserService;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//传统方法调用Userservice的方法
+		UserService user = new UserService();
+		user.setName("Kason");
+		user.sayHello();
+	
+		
+		
+		//用Spring来sayHello
+		//1.得到spring的applicationContext对象
+//		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+//		UserService user = (UserService) context.getBean("userService");
+//		user.sayHello();
+	}
+
+}
